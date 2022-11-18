@@ -70,7 +70,7 @@ namespace EditorHTML
     {
       switch (option)
       {
-        case 1: System.Console.WriteLine("Editor"); break;
+        case 1: Editor.Show(); break;
         case 2: System.Console.WriteLine("View"); break;
         case 0:
           {
