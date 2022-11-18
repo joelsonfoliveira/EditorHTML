@@ -10,6 +10,9 @@ namespace EditorHTML
       Console.ForegroundColor = ConsoleColor.Black;
 
       DrawScreen();
+      WriteOptions();
+
+      var option = short.Parse(Console.ReadLine());
     }
 
     public static void DrawScreen()
@@ -43,5 +46,24 @@ namespace EditorHTML
       System.Console.Write("+");
 
     }
+
+    public static void WriteOptions()
+    {
+      Console.SetCursorPosition(3, 2);
+      System.Console.WriteLine("Editor HTML");
+      Console.SetCursorPosition(3, 3);
+      System.Console.WriteLine("===========");
+      Console.SetCursorPosition(3, 4);
+      System.Console.WriteLine("Selecione uma opção abaixo: ");
+      Console.SetCursorPosition(3, 6);
+      System.Console.WriteLine("1 - Novo arquivo");
+      Console.SetCursorPosition(3, 7);
+      System.Console.WriteLine("2 - Abrir arquivo");
+      Console.SetCursorPosition(3, 9);
+      System.Console.WriteLine("0 - Sair");
+      Console.SetCursorPosition(3, 10);
+      System.Console.Write("Opção: ");
+    }
+
   }
 }
