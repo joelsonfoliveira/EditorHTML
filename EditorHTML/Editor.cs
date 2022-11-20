@@ -3,16 +3,16 @@ using System.Text;
 
 namespace EditorHTML
 {
-  public static class Editor
+  public class Editor
   {
     public static void Show()
     {
       Console.Clear();
-      Console.BackgroundColor = ConsoleColor.Blue;
+      Console.BackgroundColor = ConsoleColor.White;
       Console.ForegroundColor = ConsoleColor.Black;
       Console.Clear();
       Console.WriteLine("MODO EDITOR");
-      Console.WriteLine("-----------");
+      Console.WriteLine("----------------------------------------");
       Start();
     }
 
@@ -24,11 +24,10 @@ namespace EditorHTML
       {
         file.Append(Console.ReadLine());
         file.Append(Environment.NewLine);
-      } while (Console.ReadKey().Key != ConsoleKey.Escape);
-
-      Console.WriteLine("-----------");
-      Console.Write(" ");
-      Console.Write("Deseja salvar o arquivo?");
+      }
+      while (Console.ReadKey().Key != ConsoleKey.Escape);
+      Console.WriteLine("----------------------------------------");
+      Console.WriteLine("Deseja salvar este arquivo?");
       Viewer.Show(file.ToString());
     }
   }
