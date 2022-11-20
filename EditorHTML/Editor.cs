@@ -29,7 +29,7 @@ namespace EditorHTML
       Console.WriteLine("-----------");
       Console.Write(" ");
       Console.Write("Deseja salvar o arquivo?");
-
+      Viewer.Show(file.ToString());
     }
   }
 }
